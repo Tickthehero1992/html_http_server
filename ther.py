@@ -145,7 +145,7 @@ class SQL:
             command = 'SELECT * FROM sensors WHERE' + string_to_command
             self.cursor.execute(command)
             h = self.cursor.fetchall()
-           # print (hui)
+           # print (h)
             return h
           #  print (command)
         else :
