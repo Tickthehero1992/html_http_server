@@ -116,7 +116,7 @@ class SQL:
         new_sensor = SensorID, SensorName, SensorMath, SensorType
         print(new_sensor)
         #self.cursor.execute("""INSERT INTO sensors (SensorID,SensorName,SensorMath,SensorType)
-                               #VALUES ('1','hui','huek','penis') """)
+                              
         self.cursor.execute("""INSERT INTO sensors (SensorID,SensorName,SensorMath,SensorType)
                      VALUES (?, ?, ?, ?) """, new_sensor)
         #
@@ -124,8 +124,8 @@ class SQL:
     def read_one_string(self): #чтение строки
         self.cursor.execute("""SELECT SensorID 
         FROM sensors""")
-        hui = self.cursor.fetchall()
-        print(hui)
+        h = self.cursor.fetchall()
+        print(h)
 
     def commiting_sql(self): #подтверждение изменений в таблице БД
         # Если мы не просто читаем, но и вносим изменения в базу данных - необходимо сохранить транзакцию
