@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" http-equiv="refresh" content="10;">
+    <title>Non</title>
+</head>
+Myvar = 56
+<body>
+
+<script type="text/javascript">
+function getDate()
+{
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    //По надобности условие ниже повторить с minutes и hours
+    if(seconds < 10)
+    {
+        seconds = '0' + seconds;
+    }
+    document.getElementById('timedisplay').innerHTML = hours + ':' + minutes + ':' + seconds;
+}
+setInterval(getDate, 0);
+</script>
+<div id="input_string" value="123456789" /></div>
+<div id="timedisplay"></div>
+<script>
+db = openDatabase('my.sqlite')
+</script>
+<form action="/cgi-bin/page.py">
+    <input type="submit">
+
+    </form>
+</body>
+</html>

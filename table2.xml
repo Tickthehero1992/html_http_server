@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="System"?>
+<table>
+    <database></database>
+    <name>Mesuarments</name>
+    <ddl><![CDATA[CREATE TABLE Mesuarments (USI STRING PRIMARY KEY UNIQUE, Mesuarment_data STRING, "Sensor Name" REFERENCES sensors (SensorName) MATCH FULL);]]></ddl>
+    <columns>
+        <column>
+            <name>USI</name>
+            <type>STRING</type>
+            <constraints>
+                <constraint>
+                    <type>PRIMARY KEY</type>
+                    <definition>PRIMARY KEY </definition>
+                </constraint>
+                <constraint>
+                    <type>UNIQUE</type>
+                    <definition>UNIQUE</definition>
+                </constraint>
+            </constraints>
+        </column>
+        <column>
+            <name>Mesuarment_data</name>
+            <type>STRING</type>
+        </column>
+        <column>
+            <name>Sensor Name</name>
+            <type></type>
+            <constraints>
+                <constraint>
+                    <type>FOREIGN KEY</type>
+                    <definition>REFERENCES sensors (SensorName) MATCH FULL</definition>
+                </constraint>
+            </constraints>
+        </column>
+    </columns>
+    <rows>
+        <row>
+            <value column="0">1.3</value>
+            <value column="1">105.925</value>
+            <value column="2">Volt Sensor 2</value>
+        </row>
+        <row>
+            <value column="0">1.2</value>
+            <value column="1">371.6666666666667</value>
+            <value column="2">Volt Sensor1</value>
+        </row>
+        <row>
+            <value column="0">1.1</value>
+            <value column="1">12.4443359375</value>
+            <value column="2">PH Sensor1</value>
+        </row>
+    </rows>
+</table>

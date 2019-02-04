@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+
+<h1>The Enricke Server</h1>
+<BR>
+</div>
+
+<div>
+  Sensor1 : <span id="Data0">NC</span><br>
+  Sensor2 : <span id="Data1">NC</span><br>
+</div>
+
+<script>
+
+
+setInterval(function() {
+  // Call a function repetatively with 2 Second interval
+  getData0();
+  getData1();
+}, 200); //2000mSeconds update rate
+
+function getData0() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Data0").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "takeData0", true);
+  xhttp.send();
+}
+function getData1() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Data1").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "takeData1", true);
+  xhttp.send();
+}
+
+
+</script>
+
+</body>
+</html>
