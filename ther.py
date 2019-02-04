@@ -17,8 +17,6 @@ Sensor_Type = 0
 Mesuared = 0
 USI_name = 0
 
-hui=0
-penis = 0
 
 class EchoHandler(asyncore.dispatcher_with_send):
 
